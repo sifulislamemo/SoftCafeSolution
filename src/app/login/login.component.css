@@ -14,10 +14,10 @@
     
 }
 .right-radius{
-  width: 100px;
+  width: 84px;
   height: 100px;
   background: #fee267;
-  margin: -100px 0px 0px 1803px;
+  margin: -120px 0px 0px 1820px;
   border-radius: 70px 50px 50px 70px;
   position: absolute;
   left: 15px;
@@ -45,11 +45,6 @@
     background: #ffffff;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  .box h1{
-    color: #020202;
-    text-transform: uppercase;
-    font-weight: 500;
   }
   .h2, h2 {
     

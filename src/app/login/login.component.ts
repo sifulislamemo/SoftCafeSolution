@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   userlogin() {
-    console.log(this.login);
     this.loginService.loginUser(this.login).subscribe(data => {
       this.router.navigate(['/home'])
       alert("Login Success")
