@@ -6,13 +6,12 @@ import { Login } from './login';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class HomeService {
+
   private baseUrl = "http://localhost:8080/user/login";
   constructor(private httpClient: HttpClient) { }
 
-  loginUser(login: Login): Observable<object> {
-    return this.httpClient.post(`${this.baseUrl}`, login);
+  getUser(): Observable<Login[]> {
+    return this.httpClient.get<Login[]>(this.baseUrl);
   }
-
-
 }

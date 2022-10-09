@@ -3,7 +3,7 @@
   <div class="right-radius"></div>
   <div class="bottom-radius"></div>
   <div>
-    <form class="box" method="post" (ngSubmit)="userlogin()">
+    <!-- <form class="box" method="post" (ngSubmit)="userlogin()">
       <h2>Recover Password</h2>
       <p>Hello, User</p>
       <p>Plaese Recover Your Password</p>
@@ -11,6 +11,15 @@
         name="userName">
       <input type="password" [(ngModel)]="login.passWord" placeholder="Enter Mobile Number" id="passWord"
         name="passWord">
+      <button type="submit">RECOVER</button>
+    </form> -->
+
+    <form class="box" method="post" [formGroup]="loginForm" (ngSubmit)="userlogin()">
+      <h2>Recover Password</h2>
+      <p>Hello, User</p>
+      <p>Plaese Recover Your Password</p>
+      <input type="text" formControlName="userName" placeholder="Enter User Code" id="userName" name="userName">
+      <input type="password" formControlName="passWord" placeholder="Enter Mobile Number" id="passWord" name="passWord">
       <button type="submit">RECOVER</button>
     </form>
   </div>

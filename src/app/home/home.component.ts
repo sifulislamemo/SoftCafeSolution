@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../home.service';
+import { Login } from '../login';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  login: Login[] = [];
+  constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
+    this.homeService.getUser().subscribe(data => this.login = data);
   }
 
 }
